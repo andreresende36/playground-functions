@@ -108,10 +108,6 @@ function encode(text) {
   }
   return arrayEncode.join('');
 }
-console.log(encode('hello'));
-console.log(encode('How are you today?'));
-console.log(encode('This is an encoding test.'));
-console.log(encode('go Trybe!'));
 
 function decode(code) {
   let arrayDecode = [];
@@ -138,14 +134,19 @@ function decode(code) {
   return arrayDecode.join('');
 }
 
-console.log(decode('h2ll4'));
-console.log(decode('H4w 1r2 y45 t4d1y?'));
-console.log(decode('Th3s 3s 1n 2nc4d3ng t2st.'));
-console.log(decode('g4 Tryb2!'));
-
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(array, string) {
+  let arrayOrdenada = array.sort();
+  let arrayObjects = [];
+  if (array.length === 0){
+    return 'Vazio!';
+  }
+  else{
+    for (let index = 0; index < arrayOrdenada.length; index +=1){
+      arrayObjects.push({tech: arrayOrdenada[index], name: string});
+    }
+  }
+  return arrayObjects;
 }
 
 module.exports = {
