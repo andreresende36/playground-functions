@@ -66,14 +66,14 @@ function catAndMouse(posMouse, posCat1, posCat2) {
 // Desafio 8
 function fizzBuzz(array) {
   let fizzBuzzArray = [];
-  for (let number of array){
-    if (number%3 === 0 && number%5 !== 0) {
+  for (let number of array) {
+    if (number % 3 === 0 && number % 5 !== 0) {
       fizzBuzzArray.push('fizz');
     }
-    else if (number%5 === 0 && number%3 !== 0){
+    else if (number % 5 === 0 && number % 3 !== 0) {
       fizzBuzzArray.push('buzz');
     }
-    else if (number%3 === 0 && number%5 === 0){
+    else if (number % 3 === 0 && number % 5 === 0) {
       fizzBuzzArray.push('fizzBuzz');
     }
     else {
@@ -84,12 +84,64 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(text) {
+  let arrayEncode = [];
+  for (let letter of text) {
+    if (letter === 'a') {
+      arrayEncode.push(1);
+    }
+    else if (letter === 'e') {
+      arrayEncode.push(2);
+    }
+    else if (letter === 'i') {
+      arrayEncode.push(3);
+    }
+    else if (letter === 'o') {
+      arrayEncode.push(4);
+    }
+    else if (letter === 'u') {
+      arrayEncode.push(5);
+    }
+    else {
+      arrayEncode.push(letter);
+    }
+  }
+  return arrayEncode.join('');
 }
-function decode() {
-  // seu código aqui
+console.log(encode('hello'));
+console.log(encode('How are you today?'));
+console.log(encode('This is an encoding test.'));
+console.log(encode('go Trybe!'));
+
+function decode(code) {
+  let arrayDecode = [];
+  for (let letter of code) {
+    if (letter == 1) {
+      arrayDecode.push('a');
+    }
+    else if (letter == 2) {
+      arrayDecode.push('e');
+    }
+    else if (letter == 3) {
+      arrayDecode.push('i');
+    }
+    else if (letter == 4) {
+      arrayDecode.push('o');
+    }
+    else if (letter == 5) {
+      arrayDecode.push('u');
+    }
+    else {
+      arrayDecode.push(letter);
+    }
+  }
+  return arrayDecode.join('');
 }
+
+console.log(decode('h2ll4'));
+console.log(decode('H4w 1r2 y45 t4d1y?'));
+console.log(decode('Th3s 3s 1n 2nc4d3ng t2st.'));
+console.log(decode('g4 Tryb2!'));
 
 // Desafio 10
 function techList() {
