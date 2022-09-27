@@ -12,19 +12,11 @@ function calcArea(base, height) {
   return area;
 }
 
-// console.log(calcArea(10,50));
-// console.log(calcArea(5,2));
-// console.log(calcArea(51,1));
-
 // Desafio 3
 function splitSentence(sentence) {
   let array = sentence.split(' ');
   return array;
 }
-
-// console.log(splitSentence('go Trybe'));
-// console.log(splitSentence('vamo que vamo'));
-// console.log(splitSentence('foguete'));
 
 // Desafio 4
 function concatName(array) {
@@ -42,13 +34,13 @@ function footballPoints(wins, ties) {
 function highestCount(array) {
   let maior = Number.NEGATIVE_INFINITY;
   let contador = 0;
-  for (let number of array){
-    if (number >= maior){
+  for (let number of array) {
+    if (number >= maior) {
       maior = number;
     }
   }
-  for (let number of array){
-    if (number === maior){
+  for (let number of array) {
+    if (number === maior) {
       contador += 1;
     }
   }
@@ -57,8 +49,19 @@ function highestCount(array) {
 
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(posMouse, posCat1, posCat2) {
+  let distanceCat1 = Math.abs(posMouse - posCat1);
+  let distanceCat2 = Math.abs(posMouse - posCat2);
+
+  if (distanceCat1 < distanceCat2) {
+    return 'cat1';
+  }
+  else if (distanceCat2 < distanceCat1) {
+    return 'cat2';
+  }
+  else {
+    return 'os gatos trombam e o rato foge';
+  }
 }
 
 // Desafio 8
